@@ -1,0 +1,24 @@
+<h1>Task Management System</h1>
+
+<%= notice %>
+<%= link_to 'New Task', new_task_path %>
+
+<table>
+  <tr>
+    <td>title</td>
+    <td>content</td>
+    <td></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+  <% @tasks.each do |task| %>
+    <td><%= task.title %></td>
+    <td><%= task.content %></td>
+    <td><%= link_to 'Edit Task', edit_task_path(task) %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <% end %>
+</table>
