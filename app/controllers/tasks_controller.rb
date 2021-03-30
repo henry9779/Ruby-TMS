@@ -2,7 +2,8 @@ class TasksController < ApplicationController
   before_action :find_task, only: [:edit, :update, :destroy]
 
   def index
-    @tasks = Task.all
+    @tasks = Task.limit(10)
+    # 之後做分頁，以及更改關聯(使用者只能看到自己的task)
   end
 
   def new
@@ -10,7 +11,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task = Task.new(task_params)
 
     if @task.save
       redirect_to root_path, notice: 'Task Created'
