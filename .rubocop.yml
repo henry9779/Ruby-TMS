@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'node_modules/**/*'
+    - 'config.ru'
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'app/channels/**/*'
+
+  SuggestExtensions: false
