@@ -10,11 +10,12 @@ RSpec.feature 'Task management', :type => :feature do
 
     fill_in 'task_title', with: 'Ruby'
     fill_in 'task_content', with: 'Rails'
-    click_button 'Create Task'
+    click_button I18n.t("button.submit")
 
     expect(page).to have_content /Ruby.*?Rails/
     expect(Task.count).to eq 2
     expect(current_path).to eq root_path
+    expect(page).to have_content I18n.t("task.created")
   end
 
   scenario 'User updates a task' do
@@ -22,18 +23,20 @@ RSpec.feature 'Task management', :type => :feature do
 
     fill_in 'task_title', with: 'Ruby'
     fill_in 'task_content', with: 'Rails'
-    click_button 'Update Task'
+    click_button I18n.t("button.submit")
 
     expect(page).to have_content /Ruby.*?Rails/
     expect(current_path).to eq root_path
+    expect(page).to have_content I18n.t("task.updated")
   end
 
   scenario 'User delete a task' do
     visit root_path
-    click_link 'Delete'
+    click_link I18n.t("task.delete")
 
     expect(Task.count).to eq 0
     expect(current_path).to eq root_path
+    expect(page).to have_content I18n.t("task.deleted")
   end
 end
 

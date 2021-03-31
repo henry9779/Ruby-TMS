@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to root_path, notice: 'Task Created'
+      redirect_to root_path, notice: I18n.t("task.created")
     else
       render :new
     end
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to root_path, notice: 'Task Updated'
+      redirect_to root_path, notice: I18n.t("task.updated")
     else
       render :edit
     end
@@ -33,9 +33,9 @@ class TasksController < ApplicationController
 
   def destroy
     if @task.destroy
-      redirect_to root_path, notice: 'Task Deleted'
+      redirect_to root_path, notice: I18n.t("task.deleted")
     else
-      render 'Record Not Found'
+      render status: 404
     end
   end
 

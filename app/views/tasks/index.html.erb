@@ -1,12 +1,12 @@
-<h1>Task Management System</h1>
+<h1><%= t("task_management_system") %></h1>
 
 <%= notice %>
-<%= link_to 'New Task', new_task_path %>
+<%= link_to t("task.new"), new_task_path %>
 
 <table>
   <tr>
-    <td>title</td>
-    <td>content</td>
+    <td><%= t("task.title") %></td>
+    <td><%= t("task.content") %></td>
     <td></td>
   </tr>
 </table>
@@ -16,12 +16,12 @@
   <% @tasks.each do |task| %>
     <td><%= task.title %></td>
     <td><%= task.content %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+    <td><%= link_to t("task.edit"), edit_task_path(task) %></td>
     <td>
-      <%= link_to 'Delete',
+      <%= link_to t("task.delete"),
                   task_path(task),
                   method: 'delete',
-                  data: {confirm: 'Are you sure?'}
+                  data: {confirm: t("notice.confirm")}
       %>
     </td>
   </tr>

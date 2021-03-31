@@ -1,9 +1,9 @@
 <%= form_for task do |f| %>
-  <%= f.label :title %>
+  <%= f.label :title, t("task.title") %>
   <%= f.text_field :title %>
-  <%= f.label :content %>
+  <%= f.label :content, t("task.content") %>
   <%= f.text_area :content %>
-  <%= f.submit %>
+  <%= f.submit t("button.submit")%>
 <% end %>
 
-<%= link_to 'Back', root_path %>
+<%= link_to t("link.back_root"), root_path %>
