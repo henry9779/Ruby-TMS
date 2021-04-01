@@ -1,23 +1,23 @@
 en:
-  Task Management System: "Task Management System"
-  New Task: "New Task"
-  Edit Task: "Edit Task"
+  Task Management System: 'Task Management System'
+  New Task: 'New Task'
+  Edit Task: 'Edit Task'
 
   task:
-    new: "New Task"
-    edit: "Edit"
-    delete: "Delete"
-    title: "Title"
-    content: "Content"
-    created: "Task Created."
-    updated: "Task Updated."
-    deleted: "Task Deleted."
+    new: 'New Task'
+    edit: 'Edit'
+    delete: 'Delete'
+    title: 'Title'
+    content: 'Content'
+    created: 'Task Created.'
+    updated: 'Task Updated.'
+    deleted: 'Task Deleted.'
 
   link:
-    back_root: "Back"
+    back_root: 'Back'
 
   notice:
-    confirm: "Are you sure?"
+    confirm: 'Are you sure?'
 
   button:
-    submit: "Send"
+    submit: 'Send'

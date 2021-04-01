@@ -1,42 +1,50 @@
 require 'rails_helper'
 
-RSpec.feature 'Task management', :type => :feature do
-
-  # 先新增一個任務，給編輯跟刪除使用
-  let!(:first_task) { Task.create(title: 'hello', content: 'world') }
-
-  scenario 'User creates a new task' do
+RSpec.feature 'Create Task Flow' do
+  scenario 'create task' do
     visit new_task_path
 
-    fill_in 'task_title', with: 'Ruby'
-    fill_in 'task_content', with: 'Rails'
-    click_button I18n.t("button.submit")
+    fill_data('Ruby', 'Rails')
+    click_button I18n.t('button.submit')
 
-    expect(page).to have_content /Ruby.*?Rails/
-    expect(Task.count).to eq 2
+    expect(page).to have_content 'Ruby'
+    expect(page).to have_content 'Rails'
+    expect(Task.count).to eq 1
     expect(current_path).to eq root_path
-    expect(page).to have_content I18n.t("task.created")
-  end
-
-  scenario 'User updates a task' do
-    visit edit_task_path(first_task)
-
-    fill_in 'task_title', with: 'Ruby'
-    fill_in 'task_content', with: 'Rails'
-    click_button I18n.t("button.submit")
-
-    expect(page).to have_content /Ruby.*?Rails/
-    expect(current_path).to eq root_path
-    expect(page).to have_content I18n.t("task.updated")
-  end
-
-  scenario 'User delete a task' do
-    visit root_path
-    click_link I18n.t("task.delete")
-
-    expect(Task.count).to eq 0
-    expect(current_path).to eq root_path
-    expect(page).to have_content I18n.t("task.deleted")
+    expect(page).to have_content I18n.t('task.created')
   end
 end
 
+RSpec.feature 'Update Task Flow' do
+  let!(:first_task) { Task.create(title: 'hello', content: 'world') }
+  scenario 'update task' do
+    visit edit_task_path(first_task)
+
+    fill_data('Ruby', 'Rails')
+    click_button I18n.t('button.submit')
+
+    expect(page).to have_content 'Ruby'
+    expect(page).to have_content 'Rails'
+    expect(current_path).to eq root_path
+    expect(page).to have_content I18n.t('task.updated')
+  end
+end
+
+RSpec.feature 'Delete Task Flow' do
+  let!(:first_task) { Task.create(title: 'hello', content: 'world') }
+  scenario 'delete task' do
+    visit root_path
+    click_link I18n.t('task.delete')
+
+    expect(Task.count).to eq 0
+    expect(current_path).to eq root_path
+    expect(page).to have_content I18n.t('task.deleted')
+  end
+end
+
+private
+
+  def fill_data(title, content)
+    fill_in 'task_title', with: title
+    fill_in 'task_content', with: content
+  end
