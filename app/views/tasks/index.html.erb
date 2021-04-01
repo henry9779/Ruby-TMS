@@ -1,0 +1,29 @@
+<h1><%= t("task_management_system") %></h1>
+
+<%= notice %>
+<%= link_to t("task.new"), new_task_path %>
+
+<table>
+  <tr>
+    <td><%= t("task.title") %></td>
+    <td><%= t("task.content") %></td>
+    <td></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+  <% @tasks.each do |task| %>
+    <td><%= task.title %></td>
+    <td><%= task.content %></td>
+    <td><%= link_to t("task.edit"), edit_task_path(task) %></td>
+    <td>
+      <%= link_to t("task.delete"),
+                  task_path(task),
+                  method: 'delete',
+                  data: {confirm: t("notice.confirm")}
+      %>
+    </td>
+  </tr>
+  <% end %>
+</table>
