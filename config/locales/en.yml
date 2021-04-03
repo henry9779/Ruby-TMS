@@ -23,3 +23,9 @@ en:
 
   button:
     submit: 'Send'
+
+  title:
+    blank: 'cannot be blank.'
+
+  content:
+    blank: 'cannot be blank.'

@@ -23,3 +23,9 @@ zh-TW:
 
   button:
     submit: '送出資料'
+
+  title:
+    blank: '不可為空白'
+
+  content:
+    blank: '不可為空白'
