@@ -4,6 +4,7 @@ en:
   Edit Task: 'Edit Task'
 
   task:
+    id: 'ID'
     new: 'New Task'
     edit: 'Edit'
     delete: 'Delete'
@@ -12,6 +13,7 @@ en:
     created: 'Task Created.'
     updated: 'Task Updated.'
     deleted: 'Task Deleted.'
+    created_at: 'Create At'
 
   link:
     back_root: 'Back'
