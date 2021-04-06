@@ -1,7 +1,9 @@
 en:
   Task Management System: 'Task Management System'
+  Task list: 'Task List'
   New Task: 'New Task'
   Edit Task: 'Edit Task'
+  language: 'Language'
 
   task:
     id: 'ID'

@@ -1,7 +1,9 @@
 zh-TW:
   task_management_system: '任務管理系統'
+  task_list: '任務列表'
   new_task: '新增任務'
   edit_task: '編輯任務'
+  language: '語言'
 
   task:
     id: '編號'
@@ -10,6 +12,7 @@ zh-TW:
     delete: '刪除'
     title: '標題'
     content: '內容'
+    list: '列表'
     created: '任務建立成功'
     updated: '任務更新成功'
     deleted: '任務已刪除'
