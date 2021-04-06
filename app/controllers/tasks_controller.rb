@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :find_task, only: [:edit, :update, :destroy]
 
   def index
-    @tasks = Task.limit(10)
+    @tasks = Task.show_desc
     # pendding kaminari
   end
 
