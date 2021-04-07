@@ -9,10 +9,3 @@ RSpec.feature 'index' do
     expect(page.body.index(new_task.title)).to be < page.body.index(first_task.title)
   end
 end
-
-private
-
-  def fill_data(title, content)
-    fill_in 'task_title', with: title
-    fill_in 'task_content', with: content
-  end

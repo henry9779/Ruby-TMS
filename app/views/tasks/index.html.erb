@@ -9,6 +9,7 @@
     <td><%= t('task.title') %></td>
     <td><%= t('task.content') %></td>
     <td><%= t('task.created_at') %></td>
+    <td><%= t('task.end_at') %></td>
   </tr>
 </table>
 
@@ -19,6 +20,7 @@
       <td><%= task.title %></td>
       <td><%= task.content %></td>
       <td><%= task.created_at %></td>
+      <td><%= task.end_at %></td>
       <td><%= link_to t('task.edit'), edit_task_path(task) %></td>
       <td>
         <%= link_to t('task.delete'),

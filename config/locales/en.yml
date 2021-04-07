@@ -16,6 +16,7 @@ en:
     updated: 'Task Updated.'
     deleted: 'Task Deleted.'
     created_at: 'Create At'
+    end_at: 'End At'
 
   link:
     back_root: 'Back'
