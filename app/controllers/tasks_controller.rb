@@ -2,8 +2,8 @@ class TasksController < ApplicationController
   before_action :find_task, only: [:edit, :update, :destroy]
 
   def index
-    @tasks = Task.limit(10)
-    # 之後做分頁，以及更改關聯(使用者只能看到自己的task)
+    @tasks = Task.show_desc
+    # pendding kaminari
   end
 
   def new
@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to root_path, notice: I18n.t("task.created")
+      redirect_to root_path, notice: I18n.t('task.created')
     else
       render :new
     end
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to root_path, notice: I18n.t("task.updated")
+      redirect_to root_path, notice: I18n.t('task.updated')
     else
       render :edit
     end
@@ -33,7 +33,7 @@ class TasksController < ApplicationController
 
   def destroy
     if @task.destroy
-      redirect_to root_path, notice: I18n.t("task.deleted")
+      redirect_to root_path, notice: I18n.t('task.deleted')
     else
       render status: 404
     end
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content)
+    params.require(:task).permit(:title, :content, :end_at)
   end
 
   def find_task

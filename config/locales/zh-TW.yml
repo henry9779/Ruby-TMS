@@ -1,23 +1,35 @@
 zh-TW:
-  task_management_system: "任務管理系統"
-  new_task: "新增任務"
-  edit_task: "編輯任務"
+  task_management: '任務管理系統'
+  task_list: '任務列表'
+  new_task: '新增任務'
+  edit_task: '編輯任務'
+  language: '語言'
 
   task:
-    new: "新增任務"
-    edit: "編輯"
-    delete: "刪除"
-    title: "任務標題"
-    content: "內容"
-    created: "任務建立成功"
-    updated: "任務更新成功"
-    deleted: "任務已刪除"
+    id: '編號'
+    new: '新增任務'
+    edit: '編輯'
+    delete: '刪除'
+    title: '標題'
+    content: '內容'
+    list: '列表'
+    created: '任務建立成功'
+    updated: '任務更新成功'
+    deleted: '任務已刪除'
+    created_at: '建立時間'
+    end_at: '結束時間'
 
   link:
-    back_root: "返回"
+    back_root: '返回'
 
   notice:
-    confirm: "確定刪除嗎?"
+    confirm: '確定刪除嗎?'
 
   button:
-    submit: "送出資料"
+    submit: '送出資料'
+
+  title:
+    blank: '不可為空白'
+
+  content:
+    blank: '不可為空白'

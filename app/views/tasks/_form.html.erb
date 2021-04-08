@@ -1,9 +1,17 @@
-<%= form_for task do |f| %>
-  <%= f.label :title, t("task.title") %>
-  <%= f.text_field :title %>
-  <%= f.label :content, t("task.content") %>
-  <%= f.text_area :content %>
-  <%= f.submit t("button.submit")%>
+<% if @task.errors.any? %>
+  <% @task.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
 <% end %>
 
-<%= link_to t("link.back_root"), root_path %>
+<%= form_for task do |f| %>
+  <%= f.label :title, t('task.title') %>
+  <%= f.text_field :title %>
+  <%= f.label :content, t('task.content') %>
+  <%= f.text_area :content %>
+  <%= f.label :end_at, t('task.end_at') %>
+  <%= f.datetime_field :end_at %>
+  <%= f.submit t('button.submit')%>
+<% end %>
+
+<%= link_to t('link.back_root'), root_path %>
