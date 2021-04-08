@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'rails-i18n', '~> 6.0'
 gem 'rubocop', '~> 1.12'
 gem 'rubocop-rails', '~> 2.9', '>= 2.9.1'
+gem 'aasm', '~> 5.1', '>= 5.1.1'
+gem 'nokogiri', '~> 1.11', '>= 1.11.3'
+gem 'ransack', '~> 2.4', '>= 2.4.2'
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
