@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Delete Task Flow' do
   let!(:first_task) { Task.create(title: 'hello', content: 'world') }
+
   scenario 'delete task' do
     visit root_path
     click_link I18n.t('task.delete')
