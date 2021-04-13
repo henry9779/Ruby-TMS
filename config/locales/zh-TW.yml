@@ -4,6 +4,9 @@ zh-TW:
   new_task: '新增任務'
   edit_task: '編輯任務'
   language: '語言'
+  pending: '待處理'
+  proceeding: '進行中'
+  complete: '完成'
 
   task:
     id: '編號'
@@ -11,6 +14,7 @@ zh-TW:
     edit: '編輯'
     delete: '刪除'
     title: '標題'
+    status: '狀態'
     content: '內容'
     list: '列表'
     created: '任務建立成功'

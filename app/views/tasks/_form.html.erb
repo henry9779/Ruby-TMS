@@ -9,6 +9,10 @@
   <%= f.text_field :title %>
   <%= f.label :content, t('task.content') %>
   <%= f.text_area :content %>
+  <%= f.label :status, t('task.status') %>
+  <%= f.select :status, [ [t('pending'), 'pending'],
+                          [t('proceeding'), 'proceeding'],
+                          [t('complete'), 'complete'] ] %>
   <%= f.label :end_at, t('task.end_at') %>
   <%= f.datetime_field :end_at %>
   <%= f.submit t('button.submit')%>
