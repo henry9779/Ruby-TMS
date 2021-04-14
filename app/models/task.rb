@@ -4,24 +4,28 @@ class Task < ApplicationRecord
 
   scope :show_desc, -> { order(created_at: :desc) }
 
-  validates :title, :presence => { :message => I18n.t('title.blank') }
-  validates :content, :presence => { :message => I18n.t('content.blank') }
+  validates :title, presence: { message: I18n.t('title.blank') }
+  validates :content, presence: { message: I18n.t('content.blank') }
   validates :status, presence: true
 
-  enum status: { pending: 0, proceeding: 1, complete: 2 }
+  enum status: { pending: 0, in_progress: 1, completed: 2 }
 
   include AASM
 
-  aasm column: :status, enum: true, skip_validation_on_save: true do
+  aasm column: :status, enum: true do
     state :pending, initial: true
-    state :proceeded, :completed
+    state :in_progress, :completed
 
-    event :proceeding do
-      transitions from: :pending, to: :proceeded
+    event :proceed do
+      transitions from: :pending, to: :in_progress
     end
 
     event :complete do
-      transitions from: :proceeded, to: :completed
+      transitions from: :in_progress, to: :completed
+    end
+
+    event :reset do
+      transitions form: %i[in_progress completed], to: :pending
     end
   end
 end
