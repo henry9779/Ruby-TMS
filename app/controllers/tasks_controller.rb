@@ -4,6 +4,8 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.show_desc
     # pendding kaminari
+    @q = Task.ransack(params[:q])
+    @tasks = @q.result(distinct: true)
   end
 
   def new

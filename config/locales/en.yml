@@ -7,6 +7,7 @@ en:
   pending: 'pending'
   proceeding: 'proceeding'
   complete: 'complete'
+  search: 'Search'
 
   task:
     id: 'ID'

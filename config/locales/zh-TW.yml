@@ -7,6 +7,7 @@ zh-TW:
   pending: '待處理'
   proceeding: '進行中'
   complete: '完成'
+  search: '搜尋'
 
   task:
     id: '編號'
