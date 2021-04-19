@@ -4,10 +4,9 @@ en:
   new_task: 'New Task'
   edit_task: 'Edit Task'
   language: 'Language'
-  pending: 'pending'
-  proceeding: 'proceeding'
-  complete: 'complete'
-  search: 'Search'
+  pending: 'Not Started'
+  in_progress: 'In Progress'
+  completed: 'Complete'
 
   task:
     id: 'ID'
@@ -31,6 +30,7 @@ en:
 
   button:
     submit: 'Send'
+    search: 'Search'
 
   title:
     blank: 'cannot be blank.'

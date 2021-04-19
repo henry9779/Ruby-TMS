@@ -5,9 +5,8 @@ zh-TW:
   edit_task: '編輯任務'
   language: '語言'
   pending: '待處理'
-  proceeding: '進行中'
-  complete: '完成'
-  search: '搜尋'
+  in_progress: '進行中'
+  completed: '已完成'
 
   task:
     id: '編號'
@@ -32,6 +31,7 @@ zh-TW:
 
   button:
     submit: '送出資料'
+    search: '搜尋'
 
   title:
     blank: '不可為空白'

@@ -7,6 +7,7 @@ class Task < ApplicationRecord
   validates :title, presence: { message: I18n.t('title.blank') }
   validates :content, presence: { message: I18n.t('content.blank') }
   validates :status, presence: true
+  validates :end_at, inclusion: { in: (Date.today..) }, allow_nil: true
 
   enum status: { pending: 0, in_progress: 1, completed: 2 }
 
