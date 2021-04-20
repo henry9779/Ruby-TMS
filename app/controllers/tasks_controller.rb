@@ -3,7 +3,6 @@ class TasksController < ApplicationController
   before_action :find_task, only: %i[edit update destroy]
 
   def index
-    @tasks = Task.show_desc
     # pendding kaminari
     @q = Task.ransack(params[:q])
     @tasks = @q.result(distinct: true)
