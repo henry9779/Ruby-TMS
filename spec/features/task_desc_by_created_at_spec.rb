@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature 'Task' do
-  let!(:first_task) { Task.create(title: 'first task', content: 'content') }
-  let!(:second_task) { Task.create(title: 'second task', content: 'content') }
+  let!(:first_task) { FactoryBot.create(:first_task) }
+  let!(:second_task) { FactoryBot.create(:second_task) }
 
-  scenario 'sort desc by create at' do
+  scenario 'sort desc by created at' do
     visit root_path
-    find('a[href="/?q%5Bs%5D=created_at+desc"]').click
+    find('.created_at a.sort_link').click
 
     within(:xpath, '//table[2]/tr[1]') do
       expect(page).to have_content('second task')

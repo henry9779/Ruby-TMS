@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Update Task Flow' do
-  let!(:first_task) do
-    Task.create(title: 'hello',
-                content: 'world',
-                end_at: '2050-12-25 12:25:00 +0800')
-  end
+  let!(:first_task) { FactoryBot.create(:first_task) }
 
   scenario 'update task' do
     visit edit_task_path(first_task)
