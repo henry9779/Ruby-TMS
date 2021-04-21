@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
   # belongs_to :user
   has_many :tags
+  paginates_per 10
 
   validates :title, presence: { message: I18n.t('title.blank') }
   validates :content, presence: { message: I18n.t('content.blank') }
