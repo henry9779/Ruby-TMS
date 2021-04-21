@@ -7,6 +7,9 @@ en:
   pending: 'Not Started'
   in_progress: 'In Progress'
   completed: 'Complete'
+  low: 'Low'
+  middle: 'Middle'
+  high: 'High'
 
   task:
     id: 'ID'
@@ -21,6 +24,7 @@ en:
     deleted: 'Task Deleted.'
     created_at: 'Create At'
     end_at: 'End At'
+    priority: 'Priority'
 
   link:
     back_root: 'Back'
