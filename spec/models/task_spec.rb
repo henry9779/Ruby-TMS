@@ -31,6 +31,15 @@ RSpec.describe Task, type: :model do
     subject.end_at = nil
     expect(subject).to be_valid
   end
+end
+
+RSpec.describe Task, type: :model do
+  subject do
+    described_class.new(title: 'test title',
+                        content: 'test content',
+                        status: 'pending',
+                        end_at: (Date.today..))
+  end
 
   it 'can search by title' do
     subject.save

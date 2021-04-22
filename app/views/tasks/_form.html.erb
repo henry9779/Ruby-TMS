@@ -10,9 +10,7 @@
   <%= f.label :content, t('task.content') %>
   <%= f.text_area :content %>
   <%= f.label :status, t('task.status') %>
-  <%= f.select :status, [ [t('pending'), 'pending'],
-                          [t('in_progress'), 'in_progress'],
-                          [t('completed'), 'completed'] ] %>
+  <%= f.select :status, options_for_status %>
   <%= f.label :end_at, t('task.end_at') %>
   <%= f.datetime_field :end_at %>
   <%= f.submit t('button.submit')%>

@@ -6,14 +6,14 @@ RSpec.feature 'Task' do
 
   scenario 'sort desc by create at' do
     visit root_path
-    find('a[href="/?q%5Bs%5D=created_at+desc"]').click
+    find('.created_at a').click
 
-    within(:xpath, '//table[2]/tr[1]') do
-      expect(page).to have_content('second task')
-    end
-
-    within(:xpath, '//table[2]/tr[2]') do
-      expect(page).to have_content('first task')
-    end
+    expect(titles).to eq(['second task', 'first task'])
   end
+end
+
+private
+
+def titles
+  page.all('.title').map(&:text)
 end
