@@ -26,6 +26,7 @@ en:
     created_at: 'Create At'
     end_at: 'End At'
     priority: 'Priority'
+    option: 'Option'
 
   link:
     back_root: 'Back'
@@ -36,6 +37,7 @@ en:
   button:
     submit: 'Send'
     search: 'Search'
+    clear: 'Clear'
 
   title:
     blank: 'cannot be blank.'

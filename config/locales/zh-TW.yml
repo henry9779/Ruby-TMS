@@ -27,6 +27,7 @@ zh-TW:
     created_at: '建立時間'
     end_at: '結束時間'
     priority: '優先順序'
+    option: '選項'
 
   link:
     back_root: '返回'
@@ -37,6 +38,7 @@ zh-TW:
   button:
     submit: '送出資料'
     search: '搜尋'
+    clear: '清除'
 
   title:
     blank: '不可為空白'
