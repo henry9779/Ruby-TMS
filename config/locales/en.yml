@@ -7,6 +7,7 @@ en:
   pending: 'Not Started'
   in_progress: 'In Progress'
   completed: 'Complete'
+  no_record: 'Record Not Found'
 
   task:
     id: 'ID'
