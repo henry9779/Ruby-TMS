@@ -1,12 +1,19 @@
 require 'rails_helper'
 
-RSpec.feature 'index' do
-  let!(:first_task) { Task.create(title: 'first_task', content: 'first') }
-  let!(:new_task) { Task.create(title: 'new_task', content: 'new') }
+RSpec.feature 'Task' do
+  let!(:first_task) { Task.create(title: 'first task', content: 'content') }
+  let!(:second_task) { Task.create(title: 'second task', content: 'content') }
 
-  scenario 'task desc' do
+  scenario 'sort desc by create at' do
     visit root_path
+    find('.created_at a').click
 
-    expect(page.body.index(new_task.title)).to be < page.body.index(first_task.title)
+    expect(titles).to eq(['second task', 'first task'])
   end
+end
+
+private
+
+def titles
+  page.all('.title').map(&:text)
 end

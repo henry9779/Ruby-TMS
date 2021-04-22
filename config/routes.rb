@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users
 
   resources :tasks, shallow: true
-
   resources :tags, shallow: true
 
 end

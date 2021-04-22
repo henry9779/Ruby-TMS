@@ -1,9 +1,11 @@
+# tasks_controller
 class TasksController < ApplicationController
-  before_action :find_task, only: [:edit, :update, :destroy]
+  before_action :find_task, only: %i[edit update destroy]
 
   def index
-    @tasks = Task.show_desc
     # pendding kaminari
+    @q = Task.ransack(params[:q])
+    @tasks = @q.result(distinct: true)
   end
 
   def new
@@ -20,8 +22,7 @@ class TasksController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @task.update(task_params)
@@ -42,7 +43,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content, :end_at)
+    params.require(:task).permit(:title, :content, :end_at, :status)
   end
 
   def find_task

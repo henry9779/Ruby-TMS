@@ -1,9 +1,13 @@
 en:
-  Task Management: 'Task Management'
-  Task list: 'Task List'
-  New Task: 'New Task'
-  Edit Task: 'Edit Task'
+  task_management: 'Task Management'
+  task_list: 'Task List'
+  new_task: 'New Task'
+  edit_task: 'Edit Task'
   language: 'Language'
+  pending: 'Not Started'
+  in_progress: 'In Progress'
+  completed: 'Complete'
+  no_record: 'Record Not Found'
 
   task:
     id: 'ID'
@@ -11,6 +15,7 @@ en:
     edit: 'Edit'
     delete: 'Delete'
     title: 'Title'
+    status: 'Status'
     content: 'Content'
     created: 'Task Created.'
     updated: 'Task Updated.'
@@ -26,6 +31,7 @@ en:
 
   button:
     submit: 'Send'
+    search: 'Search'
 
   title:
     blank: 'cannot be blank.'
