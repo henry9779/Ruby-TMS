@@ -8,14 +8,12 @@ RSpec.feature 'Task' do
     visit root_path
     find('.priority a').click
 
-    expect(priorities).to eq([I18n.t('high'),
-                                        I18n.t('middle'),
-                                        I18n.t('low')])
+    expect(priorities).to eq([I18n.t('high'), I18n.t('middle'), I18n.t('low')])
   end
 end
 
 private
 
-  def priorities
-    page.all('.task-priority').map(&:text)
-  end
+def priorities
+  page.all('.task-priority').map(&:text)
+end
