@@ -18,18 +18,12 @@
 
   <div class='col-3'>
     <%= f.label :priority, t('task.priority'), class: 'form-label' %>
-    <%= f.select :priority, [ [t('low'), 'low'],
-                              [t('middle'), 'middle'],
-                              [t('high'), 'high'] ],
-                              class: 'form-select' %>
+    <%= f.select :priority, options_for_priority, class: 'form-select' %>
   </div>
 
   <div class='col-3'>
     <%= f.label :status, t('task.status'), class: 'form-label' %>
-    <%= f.select :status, [ [t('pending'), 'pending'],
-                            [t('in_progress'), 'in_progress'],
-                            [t('completed'), 'completed'] ],
-                            class: 'form-select' %>
+    <%= f.select :status, options_for_status, class: 'form-select' %>
   </div>
 
   <div class='col-6'>

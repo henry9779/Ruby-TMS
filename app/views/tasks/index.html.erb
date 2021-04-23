@@ -29,13 +29,13 @@
   <thead class='table'>
     <tr>
       <td><%= t('task.id') %></td>
-      <td class="priority">
+      <td class='priority'>
         <%= sort_link(@q, :priority, t('task.priority'), default_order: :desc) %>
       </td>
       <td><%= t('task.status') %></td>
       <td><%= t('task.title') %></td>
       <td><%= t('task.content') %></td>
-      <td class="created_at">
+      <td class='created_at'>
         <%= sort_link(@q, :created_at, t('task.created_at'), default_order: :desc) %>
       </td>
       <td><%= t('task.end_at') %></td>
@@ -47,9 +47,9 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.id %></td>
-        <td><%= t("#{task.priority}") %></td>
+        <td class='task-priority'><%= t("#{task.priority}") %></td>
         <td><%= t("#{task.status}") %></td>
-        <td><%= task.title %></td>
+        <td class='title'><%= task.title %></td>
         <td><%= task.content %></td>
         <td><%= task.created_at %></td>
         <td><%= task.end_at %></td>
@@ -64,9 +64,9 @@
       </tr>
     <% end %>
 
-  <% if @tasks.blank? %>
-    <p><%= I18n.t('no_record') %></p>
-  <% end %>
+    <% if @tasks.blank? %>
+      <p><%= I18n.t('no_record') %></p>
+    <% end %>
   <tbody>
 </table>
 
