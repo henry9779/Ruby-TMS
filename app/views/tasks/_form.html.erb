@@ -9,6 +9,10 @@
   <%= f.text_field :title %>
   <%= f.label :content, t('task.content') %>
   <%= f.text_area :content %>
+  <%= f.label :priority, t('task.priority') %>
+  <%= f.select :priority, [ [t('low'), 'low'],
+                            [t('middle'), 'middle'],
+                            [t('high'), 'high'] ] %>
   <%= f.label :status, t('task.status') %>
   <%= f.select :status, options_for_status %>
   <%= f.label :end_at, t('task.end_at') %>

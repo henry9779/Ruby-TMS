@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Delete Task Flow' do
-  let!(:first_task) { Task.create(title: 'hello', content: 'world') }
+  let!(:first_task) { FactoryBot.create(:first_task) }
 
   scenario 'delete task' do
     visit root_path
