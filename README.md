@@ -1,5 +1,6 @@
 # 任務管理系統
 > 嘗試獨立開發 Rails 專案，從 ER-model 到網站部署，學習開發流程  
+> 網站：https://rails-tms.herokuapp.com
 >   
 
 ## ER-Model
