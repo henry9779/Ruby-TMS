@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  # belongs_to :user
+  belongs_to :user
   has_many :tags
   paginates_per 7
 

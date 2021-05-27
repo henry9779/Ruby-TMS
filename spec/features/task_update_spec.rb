@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Update Task Flow' do
-  let!(:first_task) { FactoryBot.create(:first_task) }
+  let!(:first_task) { create(:first_task) }
 
   scenario 'update task' do
     visit edit_task_path(first_task)

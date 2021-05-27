@@ -6,7 +6,8 @@ RSpec.describe Task, type: :model do
       described_class.new(title: 'test title',
                           content: 'test content',
                           status: 'pending',
-                          end_at: (Date.today..))
+                          end_at: (Date.today..),
+                          user: create(:user))
     end
 
     it 'is valid with valid attributes' do
@@ -39,7 +40,8 @@ RSpec.describe Task, type: :model do
       described_class.new(title: 'test title',
                           content: 'test content',
                           status: 'pending',
-                          end_at: (Date.today..))
+                          end_at: (Date.today..),
+                          user: create(:user) )
     end
 
     it 'can search by title' do
