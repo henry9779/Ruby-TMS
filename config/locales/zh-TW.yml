@@ -57,6 +57,7 @@ zh-TW:
 
   email:
     blank: '不可為空白'
+    format: '格式不正確'
 
   password:
     blank: '不可為空白'

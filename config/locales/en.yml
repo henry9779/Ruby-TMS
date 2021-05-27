@@ -55,8 +55,9 @@ en:
 
   email:
     blank: 'cannot be blank.'
+    format: 'fomat no allow.'
 
-  email:
+  password:
     blank: 'cannot be blank.'
 
   title:
