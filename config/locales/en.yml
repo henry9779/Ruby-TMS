@@ -11,6 +11,17 @@ en:
   low: 'Low'
   middle: 'Middle'
   high: 'High'
+  sign_up: 'Sign Up'
+  sign_in: 'Sign In'
+  new_registration: 'Registration'
+
+  user:
+    name: 'User Name'
+    email: 'Eamil'
+    password: 'Password'
+    password_confirm: 'Password Confirm'
+    created: 'User Created'
+    updated: 'User Updated'
 
   task:
     id: 'ID'
@@ -38,6 +49,15 @@ en:
     submit: 'Send'
     search: 'Search'
     clear: 'Clear'
+
+  name:
+    blank: 'cannot be blank.'
+
+  email:
+    blank: 'cannot be blank.'
+
+  email:
+    blank: 'cannot be blank.'
 
   title:
     blank: 'cannot be blank.'

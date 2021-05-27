@@ -11,6 +11,17 @@ zh-TW:
   low: '不太急'
   middle: '有點急'
   high: '非常急'
+  sign_up: '註冊'
+  sign_in: '登入'
+  new_registration: '會員註冊'
+
+  user:
+    name: '會員名稱'
+    email: '電子郵件'
+    password: '登入密碼'
+    password_confirm: '密碼確認'
+    created: '會員建立成功'
+    updated: '會員更新成功'
 
   task:
     id: '編號'
@@ -39,6 +50,16 @@ zh-TW:
     submit: '送出資料'
     search: '搜尋'
     clear: '清除'
+
+
+  name:
+    blank: '不可為空白'
+
+  email:
+    blank: '不可為空白'
+
+  password:
+    blank: '不可為空白'
 
   title:
     blank: '不可為空白'
