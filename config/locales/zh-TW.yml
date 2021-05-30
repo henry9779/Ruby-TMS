@@ -12,7 +12,8 @@ zh-TW:
   middle: '有點急'
   high: '非常急'
   sign_up: '註冊'
-  sign_in: '登入'
+  log_in: '登入'
+  log_out: '登出'
 
   user:
     name: '會員名稱'
@@ -29,6 +30,7 @@ zh-TW:
     new: '會員登入'
     created: '登入成功'
     failed: '登入失敗'
+    deleted: '你已登出'
 
   task:
     id: '編號'

@@ -12,7 +12,8 @@ en:
   middle: 'Middle'
   high: 'High'
   sign_up: 'Sign Up'
-  sign_in: 'Log In'
+  log_in: 'Log In'
+  log_out: 'Log Out'
 
   user:
     name: 'User Name'
@@ -28,7 +29,8 @@ en:
   session:
     new: 'Log in'
     created: 'Wellcome'
-    failed: 'Login Failed'
+    failed: 'Log in Failed'
+    deleted: 'Log out Successed'
 
   task:
     id: 'ID'
