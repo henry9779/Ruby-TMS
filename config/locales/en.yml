@@ -12,8 +12,7 @@ en:
   middle: 'Middle'
   high: 'High'
   sign_up: 'Sign Up'
-  sign_in: 'Sign In'
-  new_registration: 'Registration'
+  sign_in: 'Log In'
 
   user:
     name: 'User Name'
@@ -22,6 +21,14 @@ en:
     password_confirm: 'Password Confirm'
     created: 'User Created'
     updated: 'User Updated'
+
+  registration:
+    new: 'Sign up'
+
+  session:
+    new: 'Log in'
+    created: 'Wellcome'
+    failed: 'Login Failed'
 
   task:
     id: 'ID'
@@ -55,7 +62,7 @@ en:
 
   email:
     blank: 'cannot be blank.'
-    format: 'fomat no allow.'
+    format: 'fomat no allow'
 
   password:
     blank: 'cannot be blank.'

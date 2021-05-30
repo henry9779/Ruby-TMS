@@ -13,7 +13,6 @@ zh-TW:
   high: '非常急'
   sign_up: '註冊'
   sign_in: '登入'
-  new_registration: '會員註冊'
 
   user:
     name: '會員名稱'
@@ -22,6 +21,14 @@ zh-TW:
     password_confirm: '密碼確認'
     created: '會員建立成功'
     updated: '會員更新成功'
+
+  registration:
+    new: '會員註冊'
+
+  session:
+    new: '會員登入'
+    created: '登入成功'
+    failed: '登入失敗'
 
   task:
     id: '編號'
@@ -50,7 +57,6 @@ zh-TW:
     submit: '送出資料'
     search: '搜尋'
     clear: '清除'
-
 
   name:
     blank: '不可為空白'
