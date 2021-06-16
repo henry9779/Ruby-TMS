@@ -28,6 +28,8 @@ gem 'aasm', '~> 5.1', '>= 5.1.1'
 gem 'nokogiri', '~> 1.11', '>= 1.11.3'
 gem 'ransack', '~> 2.4', '>= 2.4.2'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+gem 'recaptcha', require: "recaptcha/rails"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

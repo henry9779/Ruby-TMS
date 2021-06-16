@@ -11,6 +11,26 @@ en:
   low: 'Low'
   middle: 'Middle'
   high: 'High'
+  sign_up: 'Sign Up'
+  log_in: 'Log In'
+  log_out: 'Log Out'
+
+  user:
+    name: 'User Name'
+    email: 'Eamil'
+    password: 'Password'
+    password_confirm: 'Password Confirm'
+    created: 'User Created'
+    updated: 'User Updated'
+
+  registration:
+    new: 'Sign up'
+
+  session:
+    new: 'Log in'
+    created: 'Wellcome'
+    failed: 'Log in Failed'
+    deleted: 'Log out Successed'
 
   task:
     id: 'ID'
@@ -38,6 +58,16 @@ en:
     submit: 'Send'
     search: 'Search'
     clear: 'Clear'
+
+  name:
+    blank: 'cannot be blank.'
+
+  email:
+    blank: 'cannot be blank.'
+    format: 'fomat no allow'
+
+  password:
+    blank: 'cannot be blank.'
 
   title:
     blank: 'cannot be blank.'
