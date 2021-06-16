@@ -26,6 +26,10 @@
     <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
+  <div class='col-12 mb-3'>
+    <%= recaptcha_tags site_key: ENV['RECAPTCHA_V2_SITE_KEY'] %>
+  </div>
+
   <div class='col-12 mt-3 mb-3'>
     <%= f.submit t('button.submit'), class: 'btn btn-primary' %>
     <%= link_to t('link.back_root'), root_path, class: 'btn btn-secondary' %>
