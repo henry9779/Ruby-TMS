@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :tasks
+  has_many :tasks, dependent: :delete_all
 
-  validates :name,  presence: { message: I18n.t('name.blank') }
+  validates :name, presence: { message: I18n.t('name.blank') }
 
   validates :email,
             presence: { message: I18n.t('email.blank') },
