@@ -5,7 +5,6 @@ RSpec.feature 'Create Task Flow' do
   #   visit new_task_path
   #   fill_data('ruby', 'rails', '2050-12-25 12:25:00 +0800')
   #   click_button I18n.t('button.submit')
-  #   byebug
 
   #   expect(page).to have_content 'ruby'
   #   expect(page).to have_content 'rails'
@@ -18,5 +17,4 @@ RSpec.feature 'Create Task Flow' do
   #   expect(current_path).to eq root_path
   #   expect(page).to have_content I18n.t('task.created')
   # end
-  pending
 end

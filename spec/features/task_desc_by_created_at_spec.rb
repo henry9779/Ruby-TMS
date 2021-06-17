@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Task' do
-  let!(:first_task) { FactoryBot.create(:first_task) }
-  let!(:second_task) { FactoryBot.create(:second_task) }
+  let!(:first_task) { create(:first_task) }
+  let!(:second_task) { create(:second_task) }
 
   scenario 'sort desc by created at' do
     visit root_path

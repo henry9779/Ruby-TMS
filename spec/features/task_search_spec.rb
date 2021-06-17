@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Search Flow' do
-  let!(:first_task) { FactoryBot.create(:first_task) }
+  let!(:first_task) { create(:first_task) }
 
   scenario 'search by title' do
     visit root_path
