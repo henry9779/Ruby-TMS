@@ -42,7 +42,7 @@ zh-TW:
     deleted: '你已登出'
 
   task:
-    id: '編號'
+    id: '任務編號'
     edit: '編輯'
     delete: '刪除'
     title: '標題'

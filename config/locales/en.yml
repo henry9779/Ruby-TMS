@@ -22,6 +22,7 @@ en:
   new_registration: 'Sign Up'
 
   user:
+    id: 'User ID'
     name: 'User Name'
     email: 'Eamil'
     password: 'Password'
@@ -41,7 +42,7 @@ en:
     deleted: 'Log out Successed'
 
   task:
-    id: 'ID'
+    id: 'Task ID'
     new: 'New Task'
     edit: 'Edit'
     delete: 'Delete'

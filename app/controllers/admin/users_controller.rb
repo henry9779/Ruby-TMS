@@ -1,10 +1,15 @@
 # admin_controller
 class Admin::UsersController < ApplicationController
-  before_action :find_user, only: %i[edit update destroy]
+  before_action :find_user, only: %i[show edit update destroy]
 
   def index
     @q = User.all.ransack(params[:q])
     @users = @q.result.page(params[:page]).per(7)
+  end
+
+  def show
+    @q = @user.tasks.ransack(params[:q])
+    @tasks = @q.result(distinct: true).page(params[:page]).per(7)
   end
 
   def new
