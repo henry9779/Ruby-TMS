@@ -13,7 +13,7 @@ module SessionsHelper
 
   def authenticate_user!
     if current_user.nil?
-      redirect_to users_log_in_path, notice: I18n.t('authenticate_user')
+      redirect_to log_in_path, notice: I18n.t('authenticate_user')
     end
   end
 end

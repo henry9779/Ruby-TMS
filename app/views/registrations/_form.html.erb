@@ -4,7 +4,7 @@
   <% end %>
 <% end %>
 
-<%= form_for user, html: { class: 'row g-3 m-3' } do |f| %>
+<%= form_for user, url: registation_path, html: { class: 'row g-3 m-3' } do |f| %>
 
   <div class='col-12 mb-3'>
     <%= f.label :name, t('user.name'), class: 'form-label' %>
