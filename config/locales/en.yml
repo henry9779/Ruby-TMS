@@ -2,7 +2,7 @@ en:
   task_management: 'Task Management'
   task_list: 'Task List'
   new_task: 'New Task'
-  edit_task: 'Edit Task'
+  edit_task: 'Update Task'
   language: 'Language'
   pending: 'Not Started'
   in_progress: 'In Progress'
@@ -15,17 +15,25 @@ en:
   log_in: 'Log In'
   log_out: 'Log Out'
   authenticate_user: 'Please Log in ro Sign up Frist'
+  admin: 'Admin'
+  user_list: 'User List'
+  new_user: 'New User'
+  edit_user: 'Update User'
+  new_registration: 'Sign Up'
 
   user:
+    id: 'User ID'
     name: 'User Name'
     email: 'Eamil'
     password: 'Password'
     password_confirm: 'Password Confirm'
-    created: 'User Created'
-    updated: 'User Updated'
-
-  registration:
-    new: 'Sign up'
+    created: 'User Created.'
+    updated: 'User Updated.'
+    deleted: 'User Deleted.'
+    tasks: 'No. of tasks'
+    option: 'Option'
+    edit: 'Edit'
+    delete: 'Delete'
 
   session:
     new: 'Log in'
@@ -34,7 +42,7 @@ en:
     deleted: 'Log out Successed'
 
   task:
-    id: 'ID'
+    id: 'Task ID'
     new: 'New Task'
     edit: 'Edit'
     delete: 'Delete'
