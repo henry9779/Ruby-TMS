@@ -1,14 +1,15 @@
 # tasks_controller
 class TasksController < ApplicationController
   before_action :find_task, only: %i[edit update destroy]
+  before_action :authenticate_user!
 
   def index
-    @q = Task.ransack(params[:q])
+    @q = current_user.tasks.ransack(params[:q])
     @tasks = @q.result(distinct: true).page(params[:page]).per(7)
   end
 
   def new
-    @task = Task.new
+    @task = current_user.tasks.new
   end
 
   def create
@@ -22,6 +23,7 @@ class TasksController < ApplicationController
   end
 
   def edit; end
+  # TODO: if not current_user.task 404
 
   def update
     if @task.update(task_params)
@@ -46,6 +48,6 @@ class TasksController < ApplicationController
   end
 
   def find_task
-    @task = Task.find_by(id: params[:id])
+    @task = current_user.tasks.find_by(id: params[:id])
   end
 end

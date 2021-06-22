@@ -14,6 +14,7 @@ en:
   sign_up: 'Sign Up'
   log_in: 'Log In'
   log_out: 'Log Out'
+  authenticate_user: 'Please Log in ro Sign up Frist'
 
   user:
     name: 'User Name'
