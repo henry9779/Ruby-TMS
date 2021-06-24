@@ -20,6 +20,10 @@ en:
   new_user: 'New User'
   edit_user: 'Update User'
   new_registration: 'Sign Up'
+  not_allow: 'Insufficient permissions, please contact the administrator.'
+  to_user: 'User'
+  to_admin: 'Admin'
+  cannot_delete: 'Cannot delete last admin.'
 
   user:
     id: 'User ID'

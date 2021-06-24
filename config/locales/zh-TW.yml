@@ -20,6 +20,10 @@ zh-TW:
   new_user: '新增使用者'
   edit_user: '更新使用者'
   new_registration: '使用者註冊'
+  not_allow: '權限不足無法存取, 請聯絡管理員'
+  to_user: '使用者'
+  to_admin: '管理員'
+  cannot_delete: '無法刪除最後一個管理員'
 
   user:
     id: '使用者編號'
@@ -34,6 +38,7 @@ zh-TW:
     option: '選項'
     edit: '編輯'
     delete: '刪除'
+    role: '權限'
 
   session:
     new: '使用者登入'
