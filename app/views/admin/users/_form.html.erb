@@ -17,6 +17,11 @@
   </div>
 
   <div class='col-12 mb-3'>
+    <%= f.label :role, t('user.role'), class: 'form-label' %>
+    <%= f.select :role, options_for_role, class: 'form-select' %>
+  </div>
+
+  <div class='col-12 mb-3'>
     <%= f.label :password, t('user.password'), class: 'form-label' %>
     <%= f.password_field :password, class: 'form-control' %>
   </div>

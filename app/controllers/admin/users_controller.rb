@@ -1,15 +1,16 @@
 # admin_controller
 class Admin::UsersController < ApplicationController
   before_action :find_user, only: %i[show edit update destroy]
+  before_action :authenticate_admin, only: :index
 
   def index
     @q = User.all.ransack(params[:q])
-    @users = @q.result.page(params[:page]).per(7)
+    @users = @q.result.page(params[:page])
   end
 
   def show
     @q = @user.tasks.ransack(params[:q])
-    @tasks = @q.result(distinct: true).page(params[:page]).per(7)
+    @tasks = @q.result(distinct: true).page(params[:page])
   end
 
   def new
@@ -37,17 +38,19 @@ class Admin::UsersController < ApplicationController
   end
 
   def destroy
-    if @user.destroy
-      redirect_to admin_users_path, notice: I18n.t('user.deleted')
+    if @user.admin? && User.admin.count == 1
+      redirect_to admin_users_path, notice: I18n.t('cannot_delete')
+      # TODO: cannot delete self
     else
-      render status: 404
+      @user.destroy
+      redirect_to admin_users_path, notice: I18n.t('user.deleted')
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :role)
   end
 
   def find_user
