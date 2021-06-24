@@ -14,6 +14,7 @@
         <td><%= t('user.id') %></td>
         <td><%= t('user.name') %></td>
         <td><%= t('user.email') %></td>
+        <td><%= t('user.role') %></td>
         <td><%= t('user.tasks') %></td>
         <td colspan='2'><%= t('user.option') %></td>
     </tr>
@@ -25,6 +26,7 @@
         <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
+        <td><%= I18n.t("to_#{user.role}") %></td>
         <td><%= link_to user.tasks.count, admin_user_path(user) %></td>
         <td><%= link_to t('user.edit'), edit_admin_user_path(user) %></td>
         <td>
