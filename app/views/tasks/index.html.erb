@@ -35,6 +35,7 @@
       <td><%= t('task.status') %></td>
       <td><%= t('task.title') %></td>
       <td><%= t('task.content') %></td>
+      <td><%= t('task.tags') %></td>
       <td class='created_at'>
         <%= sort_link(@q, :created_at, t('task.created_at'), default_order: :desc) %>
       </td>
@@ -51,6 +52,7 @@
         <td><%= t("#{task.status}") %></td>
         <td class='title'><%= task.title %></td>
         <td><%= task.content %></td>
+        <td><%= task.all_tags %></td>
         <td><%= task.created_at %></td>
         <td><%= task.end_at %></td>
         <td><%= link_to t('task.edit'), edit_task_path(task) %></td>
