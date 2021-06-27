@@ -60,6 +60,7 @@ en:
     end_at: 'End At'
     priority: 'Priority'
     option: 'Option'
+    tags: 'Tags'
 
   link:
     back_root: 'Back'

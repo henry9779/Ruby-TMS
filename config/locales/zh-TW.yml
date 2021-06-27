@@ -61,6 +61,7 @@ zh-TW:
     end_at: '結束時間'
     priority: '優先順序'
     option: '選項'
+    tags: '標籤'
 
   link:
     back_root: '返回'

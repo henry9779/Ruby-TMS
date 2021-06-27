@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   end
 
   resources :tasks, shallow: true
-  resources :tags, shallow: true
 
   get '/sign_up', to: 'registrations#new'
   post '/registation', to: 'registrations#create'

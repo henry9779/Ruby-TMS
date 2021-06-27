@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :user
-  has_many :tags
+  has_many :taggings
+  has_many :tags, through: :taggings, dependent: :delete_all
   paginates_per 7
 
   validates :title, presence: { message: I18n.t('title.blank') }
@@ -42,5 +43,19 @@ class Task < ApplicationRecord
     event :to_high do
       transitions from: %i[low middle], to: :high
     end
+  end
+
+  def all_tags
+    tags.map(&:name).join(',')
+  end
+
+  def all_tags=(names)
+    self.tags = names.split(',').map do |name|
+      Tag.where(name: name.strip).first_or_create
+    end
+  end
+
+  def self.tagged_with(name)
+    Tag.find_by!(name: name).tasks
   end
 end

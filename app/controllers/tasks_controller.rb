@@ -4,8 +4,13 @@ class TasksController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @q = current_user.tasks.ransack(params[:q])
-    @tasks = @q.result(distinct: true).page(params[:page])
+    @q = Task.includes(:user, :tags).ransack(params[:q])
+
+    @tasks = if params[:tag]
+      Task.tagged_with(params[:tag]).page(params[:page])
+    else
+      @q.result(distinct: true).page(params[:page])
+    end
   end
 
   def new
@@ -44,7 +49,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content, :end_at, :status, :priority)
+    params.require(:task).permit(:title, :content, :end_at, :status, :priority, :all_tags)
   end
 
   def find_task
