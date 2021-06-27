@@ -24,6 +24,9 @@ zh-TW:
   to_user: '使用者'
   to_admin: '管理員'
   cannot_delete: '無法刪除最後一個管理員'
+  record_not_found: '無此紀錄, 請返回上一頁'
+  internal_server: '伺服器錯誤, 請返回上一頁'
+  error: '錯誤'
 
   user:
     id: '使用者編號'
