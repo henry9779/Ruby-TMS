@@ -18,6 +18,11 @@
       <%= f.search_field :content_cont, class: 'form-control' %>
     </div>
 
+    <%= f.label :tags_name_cont, t('task.tags'), class: 'col-auto col-form-label' %>
+    <div class="col-sm-2">
+      <%= f.search_field :tags_name_cont, class: 'form-control' %>
+    </div>
+
     <%= f.submit t('button.search'), name: '', class: 'btn btn-secondary' %>
     <%= link_to t('button.clear'), request.path, class: "btn btn-default" %>
   </div>
