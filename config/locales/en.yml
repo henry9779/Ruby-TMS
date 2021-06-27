@@ -24,6 +24,9 @@ en:
   to_user: 'User'
   to_admin: 'Admin'
   cannot_delete: 'Cannot delete last admin.'
+  record_not_found: 'Record not found, please back.'
+  internal_server: 'Internal server error, please back.'
+  error: 'ERROR'
 
   user:
     id: 'User ID'
