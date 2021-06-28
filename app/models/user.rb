@@ -1,3 +1,4 @@
+# user class
 class User < ApplicationRecord
   has_many :tasks, dependent: :delete_all
 
@@ -7,8 +8,8 @@ class User < ApplicationRecord
 
   validates :email,
             presence: { message: I18n.t('email.blank') },
-            format: { with: /[\w]+@([\w-]+\.)+[\w-]{2,4}/,
-            message: I18n.t('email.format') },
+            format: { with: /\w+@([\w-]+\.)+[\w-]{2,4}/,
+                      message: I18n.t('email.format') },
             uniqueness: true
 
   validates :password,
@@ -43,6 +44,6 @@ class User < ApplicationRecord
   private
 
   def encrypt_password
-    self.password = Digest::SHA1.hexdigest("r#{self.password}y")
+    self.password = Digest::SHA1.hexdigest("r#{password}y")
   end
 end
