@@ -25,8 +25,6 @@ class RegistrationsController < ApplicationController
   def check_recaptcha_v2
     valid = verify_recaptcha secret_key: ENV['RECAPTCHA_V2_SECRET_KEY']
 
-    if not valid
-      redirect_to new_user_registration_path
-    end
+    redirect_to new_user_registration_path unless valid
   end
 end

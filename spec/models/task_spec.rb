@@ -41,7 +41,7 @@ RSpec.describe Task, type: :model do
                           content: 'test content',
                           status: 'pending',
                           end_at: (Date.today..),
-                          user: create(:user) )
+                          user: create(:user))
     end
 
     it 'can search by title' do
