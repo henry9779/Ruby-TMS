@@ -26,11 +26,11 @@ class User < ApplicationRecord
     state :admin
 
     event :admin do
-      transitions from: :user, to: :to_admin
+      transitions from: :user, to: :admin
     end
 
     event :user do
-      transitions from: :admin, to: :to_user
+      transitions from: :admin, to: :user
     end
   end
 
@@ -38,6 +38,7 @@ class User < ApplicationRecord
 
   def self.login(user)
     password = Digest::SHA1.hexdigest("r#{user[:password]}y")
+    byebug
     User.find_by(email: user[:email], password: password)
   end
 
