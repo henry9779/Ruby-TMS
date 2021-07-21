@@ -26,11 +26,11 @@ class User < ApplicationRecord
     state :admin
 
     event :admin do
-      transitions from: :user, to: :to_admin
+      transitions from: :user, to: :admin
     end
 
     event :user do
-      transitions from: :admin, to: :to_user
+      transitions from: :admin, to: :user
     end
   end
 
