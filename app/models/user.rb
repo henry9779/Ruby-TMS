@@ -38,7 +38,6 @@ class User < ApplicationRecord
 
   def self.login(user)
     password = Digest::SHA1.hexdigest("r#{user[:password]}y")
-    byebug
     User.find_by(email: user[:email], password: password)
   end
 

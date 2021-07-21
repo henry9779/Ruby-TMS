@@ -5,8 +5,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:user5555] = params[:user][:email]
-    if User.login(params[:user])
+    user = User.login(params[:user])
+    if user
+      session[:user_id] = user.id
       redirect_to root_path, notice: I18n.t('session.created')
     else
       redirect_to log_in_path, notice: I18n.t('session.failed')
@@ -14,7 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user5555] = nil
+    session[:user_id] = nil
     redirect_to root_path, notice: I18n.t('session.deleted')
   end
 end
